@@ -4,6 +4,7 @@ import "./globals.css";
 import QueryProvider from "@/providers/query-provider";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import SmartsuppChat from "@/components/SmartsuppChat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -174,6 +175,7 @@ export default function RootLayout({ children }) {
                 },
               }}
             />
+            <SmartsuppChat />
           </QueryProvider>
         </ThemeProvider>
       </body>
