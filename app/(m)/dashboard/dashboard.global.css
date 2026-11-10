@@ -1,0 +1,14 @@
+/* /* dashboard.global.css */
+/* :global(*),
+:global(*::before),
+:global(*::after) {
+  box-sizing: border-box;
+} */
+
+/* dashboard.global.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

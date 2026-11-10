@@ -1,0 +1,493 @@
+/*
+  Ticket thread page — uses the shared token system
+  (--panel, --panel-2, --accent, --accent-2, --accent-soft,
+   --success, --success-soft, --danger, --danger-soft,
+   --line-soft, --radius-*, --text, --text-dim, --text-faint,
+   --font-body, --font-display, --font-mono).
+  No max-width/margin:auto — fills its container.
+*/
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 1.5rem 0;
+  }
+}
+
+/* ============================================================
+   Back Link
+   ============================================================ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-faint);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  width: fit-content;
+}
+
+.back-link:hover {
+  color: var(--accent-2);
+}
+
+/* ============================================================
+   Panel
+   ============================================================ */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .panel {
+    padding: 1.1rem;
+  }
+}
+
+/* ============================================================
+   Ticket Header
+   ============================================================ */
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line-soft);
+  flex-wrap: wrap;
+}
+
+.header-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.header-meta h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+.header-meta p {
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  margin: 0.15rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--success-soft);
+  color: var(--success);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Messages
+   ============================================================ */
+.messages {
+  max-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 1.25rem;
+  padding-right: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.empty-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  color: var(--text-faint);
+  text-align: center;
+}
+
+.empty-messages p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ============================================================
+   Message Row
+   ============================================================ */
+.message-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.avatar-admin,
+.avatar-user {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.avatar-admin {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.avatar-user {
+  background: var(--accent-soft);
+  color: var(--accent-2);
+}
+
+.message-box {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+}
+
+.message-box-admin {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+}
+
+.message-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.message-author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.message-time {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+}
+
+.message-text {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ============================================================
+   Reply Form
+   ============================================================ */
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 1.25rem;
+}
+
+.reply-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.reply-label-icon {
+  color: var(--accent-2);
+}
+
+.reply-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 90px;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft);
+  background: var(--panel-2);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  outline: none;
+  resize: vertical;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.reply-textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.reply-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.reply-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reply-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.25rem;
+}
+
+.char-count {
+  font-size: 0.7rem;
+  color: var(--text-faint);
+}
+
+.reply-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.35rem;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.6rem;
+  min-height: 46px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #ffffff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+  font-family: var(--font-body);
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.2rem;
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ============================================================
+   Error message (submitError)
+   ============================================================ */
+.error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem 0.95rem;
+  border-radius: var(--radius-md);
+  background: var(--danger-soft);
+  border: 1px solid rgba(240, 70, 90, 0.25);
+  color: var(--danger);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Error / Not-found state
+   ============================================================ */
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.error-icon {
+  font-size: 2.5rem;
+}
+
+.error-state h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.error-state p {
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 480px) {
+  .panel {
+    padding: 1rem 0.9rem;
+  }
+
+  .ticket-header {
+    gap: 0.7rem;
+    padding-bottom: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .header-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .header-meta h2 {
+    font-size: 0.95rem;
+  }
+
+  .header-meta p {
+    font-size: 0.72rem;
+  }
+
+  .messages {
+    max-height: 420px;
+    gap: 0.75rem;
+  }
+
+  .avatar-admin,
+  .avatar-user {
+    width: 2.1rem;
+    height: 2.1rem;
+    font-size: 0.85rem;
+  }
+
+  .message-box,
+  .message-box-admin {
+    padding: 0.7rem 0.85rem;
+  }
+
+  .message-author {
+    font-size: 0.75rem;
+  }
+
+  .message-time {
+    font-size: 0.63rem;
+  }
+
+  .message-text {
+    font-size: 0.82rem;
+  }
+
+  .reply-textarea {
+    min-height: 70px;
+    font-size: 0.85rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.2rem;
+    min-height: 42px;
+    font-size: 0.85rem;
+  }
+}

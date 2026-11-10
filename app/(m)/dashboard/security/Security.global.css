@@ -1,0 +1,31 @@
+:root {
+  --panel: #0f172a;
+  --panel-2: #1e293b;
+  --line-soft: rgba(255, 255, 255, 0.08);
+  --text: #f8fcf9;
+  --text-dim: #cbd5e1;
+  --text-faint: #94a3b8;
+  --accent: #22c55e;
+  --accent-2: #4ade80;
+  --accent-soft: rgba(34, 197, 94, 0.15);
+  --success: #34d399;
+  --success-soft: rgba(52, 211, 153, 0.15);
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.15);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-display: system-ui, -apple-system, sans-serif;
+}
+
+:global(.alert-icon) {
+  color: var(--accent-2);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+:global(.accent-icon) {
+  color: var(--accent-2);
+}

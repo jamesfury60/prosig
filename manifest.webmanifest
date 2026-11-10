@@ -1,0 +1,22 @@
+{
+  "name": "365aff – Smart Trading Platform",
+  "short_name": "365aff",
+  "description": "365aff Smart Trading Platform",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#060810",
+  "theme_color": "#060810",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/fav.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/fav.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

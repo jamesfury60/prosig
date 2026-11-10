@@ -1,0 +1,462 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-faint);
+}
+
+.browseBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter 0.15s ease;
+}
+
+.browseBtn:hover {
+  filter: brightness(1.08);
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  min-width: 0;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.15s ease;
+  min-width: 0;
+}
+
+.statCard:hover {
+  border-color: var(--line);
+}
+
+.statIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--panel-2);
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.statIconSuccess {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.statIconPending {
+  background: rgba(245, 158, 11, 0.14);
+  color: #f59e0b;
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.statLabel {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+/* NFT grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+/* NFT card */
+.nftCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-width: 0;
+  transition: border-color 0.15s ease;
+}
+
+.nftCard:hover {
+  border-color: var(--line);
+}
+
+.nftImageWrapper {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+
+.nftImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nftImageFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nftStatusBadge {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+}
+
+.statusCompleted,
+.statusPending,
+.statusRejected,
+.statusUnknown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statusCompleted {
+  background: rgba(6, 43, 26, 0.85);
+  color: var(--success);
+}
+
+.statusPending {
+  background: rgba(43, 30, 6, 0.85);
+  color: #fcd34d;
+}
+
+.statusRejected {
+  background: rgba(43, 6, 10, 0.85);
+  color: var(--danger);
+}
+
+.statusUnknown {
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-faint);
+}
+
+/* NFT info */
+.nftInfo {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.nftTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nftMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.nftAmount {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.nftDate {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.viewBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft);
+  background: var(--panel-2);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.viewBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Skeleton loader */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--panel-2);
+  min-height: 100px;
+}
+
+.skeletonShimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.06) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.statCard.skeleton {
+  min-height: 72px;
+  padding: 1.1rem 1.25rem;
+}
+
+.nftCard.skeleton {
+  min-height: 300px;
+  background: var(--panel);
+}
+
+.nftImageSkeleton {
+  aspect-ratio: 1;
+  background: var(--panel-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.nftImageSkeleton .skeletonShimmer {
+  position: absolute;
+  inset: 0;
+}
+
+.nftInfoSkeleton {
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nftInfoSkeleton .skeletonShimmer {
+  position: relative;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--panel-2);
+}
+
+.nftInfoSkeleton .skeletonShimmer:first-child {
+  width: 70%;
+  height: 16px;
+}
+
+.nftInfoSkeleton .skeletonShimmer:nth-child(2) {
+  width: 50%;
+}
+
+.nftInfoSkeleton .skeletonShimmer:nth-child(3) {
+  width: 35%;
+}
+
+/* Error state */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+}
+
+.errorIcon {
+  font-size: 2.5rem;
+}
+
+.errorState h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.errorState p {
+  margin: 0;
+  color: var(--text-faint);
+  max-width: 400px;
+  font-size: 0.88rem;
+}
+
+.retryBtn {
+  margin-top: 0.4rem;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.retryBtn:hover {
+  filter: brightness(1.08);
+}
+
+/* Empty state */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  gap: 0.85rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+}
+
+.emptyIcon {
+  color: var(--text-faint);
+}
+
+.emptyState h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.emptyState p {
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 0.88rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .browseBtn {
+    justify-content: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,487 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  max-width: 46ch;
+}
+
+.statsRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.statChip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--text-faint);
+  margin-top: 0.1rem;
+}
+
+/* Category pills */
+.categoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.categoryPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft);
+  background: var(--panel-2);
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.categoryPill:hover {
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.categoryPillActive {
+  background: var(--accent);
+  border-color: transparent;
+  color: white;
+}
+
+.categoryPillActive:hover {
+  color: white;
+}
+
+.categoryEmoji {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Table panel */
+.tablePanel {
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.tableHeaderIcon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.tableTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+}
+
+.countPill {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--panel-2);
+  border: 1px solid var(--line-soft);
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tableScroll {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-soft);
+}
+
+@media (max-width: 640px) {
+  .tableScroll {
+    display: none;
+  }
+}
+
+.mobileList {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobileList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+}
+
+.mobileRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-soft);
+  background: var(--panel-2);
+  min-width: 0;
+}
+
+.mobileMeta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileMeta .assetSymbol,
+.mobileMeta .assetName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobileTradeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: filter 0.15s ease;
+}
+
+.mobileTradeBtn:hover {
+  filter: brightness(1.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.table thead tr {
+  background: var(--panel-2);
+}
+
+.table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  border-top: 1px solid var(--line-soft);
+  white-space: nowrap;
+}
+
+.assetCell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.assetIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.assetMeta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.assetSymbol {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.assetName {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+
+.priceCell {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.changeUp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--success);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.changeDown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--danger);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.changeFlat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-faint);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.changeVal {
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+}
+
+.volumeCell {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.tradeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter 0.15s ease;
+}
+
+.tradeBtn:hover {
+  filter: brightness(1.1);
+}
+
+/* Skeleton Loader */
+
+/* Skeleton Loading */
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+}
+
+.skeletonRow {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.skeletonRow:last-child {
+  border-bottom: none;
+}
+
+.skeletonCell {
+  flex: 1;
+  height: 1.5rem;
+  background: var(--panel-2);
+  border-radius: 0.25rem;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeletonCell:first-child {
+  flex: 2;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Error State */
+.errorState {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+}
+
+.errorIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.errorState h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.errorState p {
+  color: var(--text-faint);
+  margin-bottom: 1.5rem;
+}
+
+.retryBtn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retryBtn:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+}
+
+/* Asset Image */
+.assetImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mobileAssetImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Category Count */
+.categoryCount {
+  font-size: 0.65rem;
+  opacity: 0.6;
+  margin-left: 0.15rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeletonRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skeletonCell {
+    height: 1rem;
+  }
+
+  .skeletonCell:first-child {
+    flex: 1;
+  }
+}

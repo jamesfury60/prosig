@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rhoE \"\\(blue|indigo|violet|purple|sky|cyan|teal|fuchsia\\)-[0-9]{2,3}\" app components)",
+      "Bash(node scripts-tmp/color-audit.js .)",
+      "Bash(node scripts-tmp/color-swap.js . --dry)",
+      "Bash(tar -czf scripts-tmp/source-backup.tar.gz app components lib providers)",
+      "Bash(node scripts-tmp/color-swap.js .)",
+      "Bash(node scripts-tmp/rename-blue.js .)",
+      "Bash(npx next *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

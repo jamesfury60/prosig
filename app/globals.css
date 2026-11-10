@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* :root {
+  --background: #f4fbf7;
+  --foreground: #10131c;
+
+  --browser-bg: #f4fbf7;
+  --browser-fg: #10131c;
+} */
+
+:root {
+  /* your existing values — keep these */
+  --background: #f4fbf7;
+  --foreground: #10131c;
+  --browser-bg: #f4fbf7;
+  --browser-fg: #10131c;
+
+  /* new — auth-page palette (dark, since :root is the default) */
+  --bg-dark: #030712;
+  --card-bg: rgba(11, 18, 33, 0.82);
+  --input-bg: rgba(15, 23, 42, 0.95);
+  --input-bg-focus: #0f172a;
+  --border-soft: rgba(34, 197, 94, 0.22);
+  --border-active: #4ade80;
+  --text-bright: #f8fcf9;
+  --text-muted: #94a3b8;
+  --green-primary: #16a34a;
+  --green-bright: #22c55e;
+  --green-deep: #10b981;
+  --green-success: #34d399;
+  --green-accent: #22c55e;
+  --yellow-accent: #eab308;
+  --red-accent: #ef4444;
+  --headline-gradient: linear-gradient(135deg, #ffffff 0%, #86efac 100%);
+  --grid-line-opacity: 1;
+  --spinner-glow-opacity: 1;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.5rem;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+@theme inline {
+  /* unchanged */
+}
+
+/* DARK THEME (your existing block, keep as-is) */
+html.dark {
+  --background: #060810;
+  --foreground: #eefbf3;
+  --browser-bg: #060810;
+  --browser-fg: #eefbf3;
+
+  /* new — dark overrides for auth pages, same values as :root */
+  --bg-dark: #030712;
+  --card-bg: rgba(11, 18, 33, 0.82);
+  --input-bg: rgba(15, 23, 42, 0.95);
+  --input-bg-focus: #0f172a;
+  --border-soft: rgba(34, 197, 94, 0.22);
+  --border-active: #4ade80;
+  --text-bright: #f8fcf9;
+  --text-muted: #94a3b8;
+  --green-primary: #16a34a;
+  --green-bright: #22c55e;
+  --green-deep: #10b981;
+  --green-success: #34d399;
+  --green-accent: #22c55e;
+  --yellow-accent: #eab308;
+  --red-accent: #ef4444;
+  --headline-gradient: linear-gradient(135deg, #ffffff 0%, #86efac 100%);
+  --grid-line-opacity: 1;
+  --spinner-glow-opacity: 1;
+
+  background: #060810;
+  color-scheme: dark;
+}
+
+/* LIGHT THEME (your existing block, keep as-is) */
+html.light {
+  --background: #f4fbf7;
+  --foreground: #10131c;
+  --browser-bg: #f4fbf7;
+  --browser-fg: #10131c;
+
+  /* new — light overrides for auth pages */
+  --bg-dark: #f1fbf5;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --input-bg: #ffffff;
+  --input-bg-focus: #ffffff;
+  --border-soft: rgba(22, 163, 74, 0.18);
+  --border-active: #16a34a;
+  --text-bright: #0f172a;
+  --text-muted: #64748b;
+  --green-primary: #16a34a;
+  --green-bright: #22c55e;
+  --green-deep: #059669;
+  --green-success: #059669;
+  --green-accent: #059669;
+  --yellow-accent: #ca8a04;
+  --red-accent: #dc2626;
+  --headline-gradient: linear-gradient(135deg, #0f172a 0%, #16a34a 100%);
+  --grid-line-opacity: 0.5;
+  --spinner-glow-opacity: 1;
+
+  background: #f4fbf7;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/*
+|--------------------------------------------------------------------------
+| DARK THEME
+|--------------------------------------------------------------------------
+*/
+html.dark {
+  --background: #060810;
+  --foreground: #eefbf3;
+
+  --browser-bg: #060810;
+  --browser-fg: #eefbf3;
+
+  background: #060810;
+  color-scheme: dark;
+}
+
+/*
+|--------------------------------------------------------------------------
+| LIGHT THEME
+|--------------------------------------------------------------------------
+*/
+html.light {
+  --background: #f4fbf7;
+  --foreground: #10131c;
+
+  --browser-bg: #f4fbf7;
+  --browser-fg: #10131c;
+
+  background: #f4fbf7;
+  color-scheme: light;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Base HTML
+|--------------------------------------------------------------------------
+*/
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background: var(--browser-bg);
+  color: var(--browser-fg);
+
+  /*
+   * Tell the browser this page is designed for both themes.
+   */
+  color-scheme: light dark;
+
+  /*
+   * Helps prevent white flashes around the viewport.
+   */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Body
+|--------------------------------------------------------------------------
+*/
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+
+  background: var(--bg, var(--background));
+  color: var(--foreground);
+
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Mobile viewport / safe areas
+|--------------------------------------------------------------------------
+*/
+body {
+  min-height: 100dvh;
+}
+
+/*
+ * Prevent content from sitting underneath iPhone's home indicator.
+ */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Buttons
+|--------------------------------------------------------------------------
+*/
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Prevent iOS Safari form zoom
+|--------------------------------------------------------------------------
+*/
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Remove tap highlight on mobile
+|--------------------------------------------------------------------------
+*/
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Better mobile scrolling
+|--------------------------------------------------------------------------
+*/
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Selection
+|--------------------------------------------------------------------------
+*/
+::selection {
+  background: rgba(34, 197, 94, 0.25);
+  color: var(--foreground);
+}
