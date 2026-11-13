@@ -198,7 +198,7 @@ export default function VerifyEmailPage() {
             <div className={styles.brandLogo}>
               <Shield size={22} />
             </div>
-            <span className={styles.brandName}>Prosignalbase</span>
+            <span className={styles.brandName}>Capitaledgehub</span>
           </div>
 
           <div className={styles.iconBadge}>
@@ -233,7 +233,7 @@ export default function VerifyEmailPage() {
             <div className={styles.brandLogo}>
               <Shield size={22} />
             </div>
-            <span className={styles.brandName}>Prosignalbase</span>
+            <span className={styles.brandName}>Capitaledgehub</span>
           </div>
 
           <div className={`${styles.iconBadge} ${styles.successBadge}`}>
@@ -272,7 +272,7 @@ export default function VerifyEmailPage() {
           <div className={styles.brandLogo}>
             <Shield size={22} />
           </div>
-          <span className={styles.brandName}>Prosignalbase</span>
+          <span className={styles.brandName}>Capitaledgehub</span>
         </div>
 
         <div className={`${styles.iconBadge} ${styles.errorBadge}`}>

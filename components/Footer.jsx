@@ -35,10 +35,10 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-green-600 to-green-400 flex items-center justify-center font-bold text-white text-sm">
-                  PS
+                  CP
                 </div>
                 <span className="text-white font-semibold text-lg [html.light_&]:text-gray-900">
-                  Prosignalbase
+                  Capitaledgehub
                 </span>
               </div>
               <p className="text-gray-400 text-sm max-w-xs [html.light_&]:text-gray-600">
@@ -163,7 +163,7 @@ export default function Footer() {
 
         <div className="max-w-7xl mx-auto border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 [html.light_&]:border-black/10 [html.light_&]:text-gray-500">
           <span>
-            © {new Date().getFullYear()} Prosignalbase. All rights reserved.
+            © {new Date().getFullYear()} Capitaledgehub. All rights reserved.
           </span>
           <div className="flex items-center gap-6">
             <Link
@@ -185,7 +185,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto pt-10 flex justify-center relative">
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent [html.light_&]:via-black/5" />
           <h1 className="text-[16vw] sm:text-[12vw] font-bold text-white/10 leading-none tracking-tight select-none [html.light_&]:text-black/10">
-            Prosignalbase
+            Capitaledgehub
           </h1>
         </div>
       </div>

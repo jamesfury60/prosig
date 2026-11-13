@@ -117,13 +117,13 @@ const NAV_GROUPS = [
 
 const PRODUCTS = [
   {
-    name: "Prosignalbase App",
+    name: "Capitaledgehub App",
     tagline: "For everyday users",
     icon: Smartphone,
     tileClass: "bg-gradient-to-tr from-green-600 to-green-400 text-white",
   },
   {
-    name: "Prosignalbase Wallet",
+    name: "Capitaledgehub Wallet",
     tagline: "For Web3 enthusiasts",
     icon: Wallet,
     tileClass: "bg-white text-[#0b0d16]",
@@ -368,10 +368,10 @@ export default function Header() {
           <div className="relative flex items-center justify-between gap-4 px-5 py-3 sm:px-7">
             <Link href="/" className="flex flex-shrink-0 items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-tr from-green-600 to-green-400 text-sm font-bold text-white">
-                PS
+                CP
               </div>
               <span className="text-lg font-semibold tracking-tight text-white [html.light_&]:text-gray-900">
-                Prosignalbase
+                Capitaledgehub
               </span>
             </Link>
 
@@ -419,7 +419,7 @@ export default function Header() {
                   border-white/20 text-white hover:border-white/40 hover:bg-white/5
                   [html.light_&]:border-black/15 [html.light_&]:text-gray-900 [html.light_&]:hover:border-black/30 [html.light_&]:hover:bg-black/5"
               >
-                Join Prosignalbase
+                Join Capitaledgehub
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>

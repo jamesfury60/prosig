@@ -102,7 +102,7 @@ export default function ForgotPasswordPage() {
           {/* <div className={styles.brandLogo}>
             <Shield size={22} />
           </div>
-          <span className={styles.brandName}>Prosignalbase</span> */}
+          <span className={styles.brandName}>Capitaledgehub</span> */}
         </div>
 
         {!submitted ? (
@@ -138,7 +138,7 @@ export default function ForgotPasswordPage() {
                   />
                 </div>
                 <small className={styles.fieldHint}>
-                  Enter the email associated with your Prosignalbase account.
+                  Enter the email associated with your Capitaledgehub account.
                 </small>
               </div>
 

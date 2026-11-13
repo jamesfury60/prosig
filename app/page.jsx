@@ -44,7 +44,7 @@ const TRUST_BADGES = [
 const TESTIMONIALS = [
   {
     quote:
-      "Prosignalbase cut my execution time in half. The routing engine finds the best price without me doing anything.",
+      "Capitaledgehub cut my execution time in half. The routing engine finds the best price without me doing anything.",
     name: "Amara O.",
     role: "Day Trader, 3 years",
   },
@@ -65,14 +65,14 @@ const TESTIMONIALS = [
 const FAQS = [
   {
     q: "What is Coinverge?",
-    a: "Prosignalbase is a unified crypto trading platform combining instant swaps, non-custodial portfolio control, and real-time on-chain analytics in one dashboard.",
+    a: "Capitaledgehub is a unified crypto trading platform combining instant swaps, non-custodial portfolio control, and real-time on-chain analytics in one dashboard.",
   },
   {
     q: "Is it Possible to Access Cash with Coinverge?",
     a: "Yes, you can withdraw to a linked bank account or convert to stablecoins and cash out through supported regional payment partners.",
   },
   {
-    q: "Is Prosignalbase Secure?",
+    q: "Is Capitaledgehub Secure?",
     a: "All accounts use enterprise-grade MPC key sharding, mandatory 2FA, and cold storage for the majority of custodial funds.",
   },
   {
@@ -81,10 +81,10 @@ const FAQS = [
   },
   {
     q: "What Coins Can I Swap with Coinverge?",
-    a: "Prosignalbase supports 300+ tokens across major chains, with best-price routing handled automatically for every swap.",
+    a: "Capitaledgehub supports 300+ tokens across major chains, with best-price routing handled automatically for every swap.",
   },
   {
-    q: "How Does Prosignalbase Determine Fees?",
+    q: "How Does Capitaledgehub Determine Fees?",
     a: "Fees are volume-tiered and shown up front before you confirm any trade there are no hidden spreads or surprise charges.",
   },
 ];
@@ -292,7 +292,7 @@ export default function Page() {
       {/* Mobile app promo */}
       <MobileAppSection />
 
-      {/* Why Choose Prosignalbase — movers, live BTC chart, feature cards, reports */}
+      {/* Why Choose Capitaledgehub — movers, live BTC chart, feature cards, reports */}
       <WhyChooseSection />
 
       {/* Flex-row showcase #2 — animated chart left, text right */}
@@ -320,7 +320,7 @@ export default function Page() {
           <div className="flex-1 w-full">
             <img
               src="/assets/showcase-stake-screen.png"
-              alt="Prosignalbase staking dashboard"
+              alt="Capitaledgehub staking dashboard"
               className="w-full"
             />
           </div>

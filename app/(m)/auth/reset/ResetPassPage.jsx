@@ -243,7 +243,7 @@ export default function ResetPasswordPage() {
           {/* <div className={styles.brandLogo}>
             <Shield size={22} />
           </div>
-          <span className={styles.brandName}>Prosignalbase</span> */}
+          <span className={styles.brandName}>Capitaledgehub</span> */}
         </div>
 
         <div className={styles.iconBadge}>

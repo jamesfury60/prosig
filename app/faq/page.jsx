@@ -13,8 +13,8 @@ const FAQ_GROUPS = [
     title: "Getting Started",
     items: [
       {
-        q: "What is Prosignalbase?",
-        a: "Prosignalbase is a crypto trading platform where you can buy, sell, swap, and stake digital assets, with tools for both first-time traders and professionals.",
+        q: "What is Capitaledgehub?",
+        a: "Capitaledgehub is a crypto trading platform where you can buy, sell, swap, and stake digital assets, with tools for both first-time traders and professionals.",
       },
       {
         q: "How do I create an account?",
@@ -22,7 +22,7 @@ const FAQ_GROUPS = [
       },
       {
         q: "Is there a mobile app?",
-        a: "Yes — Prosignalbase is available for iOS and Android with the same trading features as the web platform.",
+        a: "Yes — Capitaledgehub is available for iOS and Android with the same trading features as the web platform.",
       },
     ],
   },
@@ -30,12 +30,12 @@ const FAQ_GROUPS = [
     title: "Trading & Fees",
     items: [
       {
-        q: "What are Prosignalbase's trading fees?",
+        q: "What are Capitaledgehub's trading fees?",
         a: "Fees are based on your 30-day trading volume and the market type (spot, margin, or futures), and are always shown before you confirm a trade — never hidden after the fact.",
       },
       {
         q: "What order types are supported?",
-        a: "Prosignalbase supports market, limit, and stop orders across spot markets, with more advanced order types available for margin and futures trading.",
+        a: "Capitaledgehub supports market, limit, and stop orders across spot markets, with more advanced order types available for margin and futures trading.",
       },
       {
         q: "Is there a minimum trade size?",
@@ -47,7 +47,7 @@ const FAQ_GROUPS = [
     title: "Security & Account",
     items: [
       {
-        q: "Is Prosignalbase secure?",
+        q: "Is Capitaledgehub secure?",
         a: "Yes — accounts are protected with two-factor authentication, encryption in transit and at rest, and continuous monitoring for suspicious activity.",
       },
       {
@@ -69,7 +69,7 @@ const FAQ_GROUPS = [
       },
       {
         q: "What coins can I deposit?",
-        a: "Prosignalbase supports 2,000+ tokens across major networks. The full list of supported assets is shown when you open the Deposit screen.",
+        a: "Capitaledgehub supports 2,000+ tokens across major networks. The full list of supported assets is shown when you open the Deposit screen.",
       },
       {
         q: "Are there withdrawal limits?",
@@ -116,7 +116,7 @@ export default function FaqPage() {
             </h1>
             <p className="mt-4 text-base leading-relaxed text-gray-400 [html.light_&]:text-gray-500">
               Answers to the most common questions about trading, security, and
-              your Prosignalbase account.
+              your Capitaledgehub account.
             </p>
           </div>
 

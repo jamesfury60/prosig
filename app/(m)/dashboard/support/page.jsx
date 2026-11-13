@@ -185,10 +185,10 @@ export default function NewSupportPage() {
             requests.
           </p>
           <a
-            href="mailto:support@prosignalbase.com"
+            href="mailto:support@capitaledgehub.com"
             className={styles.infoEmail}
           >
-            support@prosignalbase.com
+            support@capitaledgehub.com
           </a>
         </div>
       </div>

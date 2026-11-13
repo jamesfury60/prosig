@@ -672,7 +672,7 @@ export default function DashboardLayout({ children }) {
                 <Copyright size={18} />
               </div>
 
-              <span className={styles["brand-name"]}>Prosignalbase</span>
+              <span className={styles["brand-name"]}>Capitaledgehub</span>
             </div>
 
             <button
@@ -699,7 +699,7 @@ export default function DashboardLayout({ children }) {
                 <Copyright size={18} />
               </div>
 
-              <span className={styles["brand-name"]}>Prosignalbase</span>
+              <span className={styles["brand-name"]}>Capitaledgehub</span>
             </div>
 
             {/* eslint-disable-next-line react-hooks/static-components */}

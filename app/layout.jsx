@@ -68,32 +68,32 @@ export const viewport = {
 |--------------------------------------------------------------------------
 */
 export const metadata = {
-  title: "Prosignalbase – Smart Trading Platform",
+  title: "Capitaledgehub – Smart Trading Platform",
 
   description:
     "Trusted by millions, delivering the fastest trade execution, with powerful trading tools and a self-custody wallet.",
 
-  metadataBase: new URL("https://Prosignalbase.com"),
+  metadataBase: new URL("https://Capitaledgehub.com"),
 
   openGraph: {
-    title: "Prosignalbase – Smart Trading Platform",
+    title: "Capitaledgehub – Smart Trading Platform",
     description:
       "Trusted by millions, delivering the fastest trade execution, with powerful trading tools and a self-custody wallet.",
     type: "website",
-    url: "https://Prosignalbase.com",
+    url: "https://Capitaledgehub.com",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Prosignalbase – Smart Trading Platform",
+        alt: "Capitaledgehub – Smart Trading Platform",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Prosignalbase – Smart Trading Platform",
+    title: "Capitaledgehub – Smart Trading Platform",
     description:
       "Trusted by millions, delivering the fastest trade execution, with powerful trading tools and a self-custody wallet.",
     images: ["/og-image.png"],

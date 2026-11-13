@@ -11,7 +11,7 @@ const SECTIONS = [
     id: "acceptance",
     title: "1. Acceptance of Terms",
     body: [
-      `These Terms of Service ("Terms") form a binding agreement between you and Prosignalbase ("Prosignalbase", "we", "us", or "our") governing your access to and use of the Prosignalbase website, mobile applications, and trading services (collectively, the "Services"). By creating an account or otherwise using the Services, you agree to be bound by these Terms.`,
+      `These Terms of Service ("Terms") form a binding agreement between you and Capitaledgehub ("Capitaledgehub", "we", "us", or "our") governing your access to and use of the Capitaledgehub website, mobile applications, and trading services (collectively, the "Services"). By creating an account or otherwise using the Services, you agree to be bound by these Terms.`,
       `If you do not agree to these Terms, you must not access or use the Services. We may update these Terms from time to time as described in Section 13 below.`,
     ],
   },
@@ -35,7 +35,7 @@ const SECTIONS = [
     id: "services",
     title: "4. Description of Services",
     body: [
-      `Prosignalbase provides an online platform for buying, selling, swapping, and staking digital assets, along with related features such as market data, trading tools, and account management. We do not provide investment, legal, or tax advice, and nothing on the platform should be construed as such.`,
+      `Capitaledgehub provides an online platform for buying, selling, swapping, and staking digital assets, along with related features such as market data, trading tools, and account management. We do not provide investment, legal, or tax advice, and nothing on the platform should be construed as such.`,
       `We may add, modify, or discontinue any feature of the Services at any time, with or without notice, though we will make reasonable efforts to notify you of material changes affecting your account.`,
     ],
   },
@@ -67,14 +67,14 @@ const SECTIONS = [
     id: "ip",
     title: "8. Intellectual Property",
     body: [
-      `All content, trademarks, logos, and software associated with the Services are owned by or licensed to Prosignalbase. You may not copy, modify, distribute, or create derivative works from any part of the Services without our prior written consent.`,
+      `All content, trademarks, logos, and software associated with the Services are owned by or licensed to Capitaledgehub. You may not copy, modify, distribute, or create derivative works from any part of the Services without our prior written consent.`,
     ],
   },
   {
     id: "liability",
     title: "9. Limitation of Liability",
     body: [
-      `To the maximum extent permitted by law, Prosignalbase and its officers, employees, and affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or digital assets, arising from your use of the Services.`,
+      `To the maximum extent permitted by law, Capitaledgehub and its officers, employees, and affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or digital assets, arising from your use of the Services.`,
       `Our total liability for any claim arising from these Terms or the Services will not exceed the greater of the fees you paid to us in the twelve months preceding the claim, or $100.`,
     ],
   },
@@ -82,7 +82,7 @@ const SECTIONS = [
     id: "indemnification",
     title: "10. Indemnification",
     body: [
-      `You agree to indemnify and hold harmless Prosignalbase from any claims, damages, liabilities, and expenses (including reasonable legal fees) arising from your use of the Services, your violation of these Terms, or your violation of any applicable law or third-party right.`,
+      `You agree to indemnify and hold harmless Capitaledgehub from any claims, damages, liabilities, and expenses (including reasonable legal fees) arising from your use of the Services, your violation of these Terms, or your violation of any applicable law or third-party right.`,
     ],
   },
   {
@@ -96,7 +96,7 @@ const SECTIONS = [
     id: "disputes",
     title: "12. Governing Law & Dispute Resolution",
     body: [
-      `These Terms are governed by the laws of the jurisdiction in which Prosignalbase is incorporated, without regard to conflict-of-law principles. Any dispute arising from these Terms or the Services will first be addressed through good-faith negotiation, and if unresolved, through binding arbitration on an individual basis, except where prohibited by law.`,
+      `These Terms are governed by the laws of the jurisdiction in which Capitaledgehub is incorporated, without regard to conflict-of-law principles. Any dispute arising from these Terms or the Services will first be addressed through good-faith negotiation, and if unresolved, through binding arbitration on an individual basis, except where prohibited by law.`,
     ],
   },
   {
@@ -110,7 +110,7 @@ const SECTIONS = [
     id: "contact",
     title: "14. Contact Information",
     body: [
-      `Questions about these Terms can be directed to legal@Prosignalbase.com or through our Contact page.`,
+      `Questions about these Terms can be directed to legal@Capitaledgehub.com or through our Contact page.`,
     ],
   },
 ];
@@ -183,7 +183,7 @@ export default function TermsPage() {
                 This is a general template and does not constitute legal advice.
                 Before publishing, have these Terms reviewed by qualified legal
                 counsel familiar with the regulatory requirements in every
-                jurisdiction where Prosignalbase operates.
+                jurisdiction where Capitaledgehub operates.
               </div>
 
               <div className="flex flex-col gap-12">

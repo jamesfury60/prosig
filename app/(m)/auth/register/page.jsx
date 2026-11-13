@@ -182,7 +182,7 @@ export default function RegisterPage() {
             {/* <div className={styles.brandLogo}>
               <Shield size={22} className={styles.logoIcon} />
             </div>
-            <span className={styles.brandName}>Prosignalbase</span> */}
+            <span className={styles.brandName}>Capitaledgehub</span> */}
 
             <span className="m-auto mt-10">
               <img src="/assets/phn.avif" className="w-64" />
@@ -198,7 +198,7 @@ export default function RegisterPage() {
           </div>
 
           <div className={styles.brandFooter}>
-            © {new Date().getFullYear()} Prosignalbase. All rights reserved.
+            © {new Date().getFullYear()} Capitaledgehub. All rights reserved.
           </div>
         </div>
 

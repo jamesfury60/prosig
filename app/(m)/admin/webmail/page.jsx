@@ -73,10 +73,10 @@ export default function WebmailPage() {
               </div>
               <div className="flex items-center gap-2 font-mono text-sm font-medium text-zinc-900 dark:text-white">
                 <Mail size={14} className="text-zinc-400" />
-                <span>info@Prosignalbase.com</span>
+                <span>info@Capitaledgehub.com</span>
                 <button
                   onClick={() =>
-                    copyToClipboard("info@Prosignalbase.com", "Email")
+                    copyToClipboard("info@Capitaledgehub.com", "Email")
                   }
                   className="ml-auto rounded p-1 text-sm opacity-60 transition hover:bg-zinc-200 hover:opacity-100 dark:hover:bg-zinc-800"
                   title="Copy email"
@@ -99,10 +99,10 @@ export default function WebmailPage() {
               </div>
               <div className="flex items-center gap-2 font-mono text-sm font-medium text-zinc-900 dark:text-white">
                 <Mail size={14} className="text-zinc-400" />
-                <span>support@Prosignalbase.com</span>
+                <span>support@Capitaledgehub.com</span>
                 <button
                   onClick={() =>
-                    copyToClipboard("support@Prosignalbase.com", "Email")
+                    copyToClipboard("support@Capitaledgehub.com", "Email")
                   }
                   className="ml-auto rounded p-1 text-sm opacity-60 transition hover:bg-zinc-200 hover:opacity-100 dark:hover:bg-zinc-800"
                   title="Copy email"

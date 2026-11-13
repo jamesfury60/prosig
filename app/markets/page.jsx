@@ -82,7 +82,7 @@ export default function MarketsPage() {
             All From One Account
           </h1>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 [html.light_&]:text-gray-600">
-            Crypto, forex, stocks, and commodities Prosignalbase gives you a
+            Crypto, forex, stocks, and commodities Capitaledgehub gives you a
             single dashboard, one balance, and institutional-grade execution
             across every asset class.
           </p>

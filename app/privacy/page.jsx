@@ -11,7 +11,7 @@ const SECTIONS = [
     id: "introduction",
     title: "1. Introduction",
     body: [
-      `This Privacy Policy explains how Prosignalbase ("Prosignalbase", "we", "us", or "our") collects, uses, shares, and protects information when you use our website, mobile applications, and trading services (collectively, the "Services"). By using the Services, you agree to the practices described in this Policy.`,
+      `This Privacy Policy explains how Capitaledgehub ("Capitaledgehub", "we", "us", or "our") collects, uses, shares, and protects information when you use our website, mobile applications, and trading services (collectively, the "Services"). By using the Services, you agree to the practices described in this Policy.`,
     ],
   },
   {
@@ -92,7 +92,7 @@ const SECTIONS = [
     id: "contact",
     title: "12. Contact Us",
     body: [
-      `Questions about this Policy or requests regarding your personal information can be directed to privacy@Prosignalbase.com or through our Contact page.`,
+      `Questions about this Policy or requests regarding your personal information can be directed to privacy@Capitaledgehub.com or through our Contact page.`,
     ],
   },
 ];
@@ -165,7 +165,7 @@ export default function PrivacyPage() {
                 This is a general template and does not constitute legal advice.
                 Before publishing, have this Policy reviewed by qualified legal
                 counsel familiar with the data-protection laws applicable in
-                every jurisdiction where Prosignalbase operates (e.g. GDPR,
+                every jurisdiction where Capitaledgehub operates (e.g. GDPR,
                 CCPA, and local AML/KYC regulations).
               </div>
 

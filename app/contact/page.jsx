@@ -17,7 +17,7 @@ const CONTACT_CARDS = [
   {
     icon: HiOutlineMail,
     label: "Email us",
-    value: "support@prosignalbase.com",
+    value: "support@capitaledgehub.com",
     sub: "We reply within 24 hours",
   },
   {

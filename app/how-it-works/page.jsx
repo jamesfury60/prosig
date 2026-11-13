@@ -53,7 +53,7 @@ const FAQS = [
   },
   {
     q: "Do I need trading experience?",
-    a: "No. Prosignalbase includes a demo mode with virtual funds so you can practice before trading with real money.",
+    a: "No. Capitaledgehub includes a demo mode with virtual funds so you can practice before trading with real money.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function HowItWorksPage() {
           </h1>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-8 [html.light_&]:text-gray-600">
             Four steps, most people finish in under ten minutes. Here&rsquo;s
-            exactly what to expect with Prosignalbase.
+            exactly what to expect with Capitaledgehub.
           </p>
           <Link
             href="/auth/register"

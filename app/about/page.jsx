@@ -52,7 +52,7 @@ export default function AboutPage() {
             This Hard To Trust
           </h1>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto [html.light_&]:text-gray-600">
-            We started Prosignalbase because switching between five apps to
+            We started Capitaledgehub because switching between five apps to
             manage one portfolio was never the point of trading. One account,
             every market, no compromises on security.
           </p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed [html.light_&]:text-gray-600">
               We believe access to global markets shouldn&rsquo;t require a
-              finance degree or five separate logins. Prosignalbase brings
+              finance degree or five separate logins. Capitaledgehub brings
               crypto, stocks, forex, and commodities into a single account, with
               the same security standards a bank would use, and none of the
               unnecessary complexity.
