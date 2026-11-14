@@ -132,12 +132,12 @@ const NAV_GROUPS = [
         href: "/dashboard/staking",
         icon: Layers,
       },
-      {
-        id: "demo",
-        label: "Demo Trade",
-        href: "/dashboard/demo_dash",
-        icon: MonitorPlay,
-      },
+      // {
+      //   id: "demo",
+      //   label: "Demo Trade",
+      //   href: "/dashboard/demo_dash",
+      //   icon: MonitorPlay,
+      // },
       {
         id: "support",
         label: "Support Center",

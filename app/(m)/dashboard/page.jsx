@@ -325,7 +325,7 @@ export default function DashboardPage() {
   return (
     <div className={styles["dashboard-page"]}>
       {/* Demo Account Header Banner */}
-      <div
+      {/* <div
         className={cx(
           styles["demo-banner"],
           DemoAccount && styles["active-demo"],
@@ -350,7 +350,7 @@ export default function DashboardPage() {
         <button className={styles["btn-demo-toggle"]} onClick={DemoAccount}>
           Switch to Demo Trading
         </button>
-      </div>
+      </div> */}
       {/* Top Grid */}
       <div className={styles["top-grid"]}>
         {/* Wallet Deck */}

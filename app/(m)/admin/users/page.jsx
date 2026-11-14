@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   Search,
   Edit2,
@@ -12,31 +13,44 @@ import {
   CheckCircle,
   XCircle,
   Users,
+  UserCog,
 } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { api } from "@/lib/axios";
 
 export default function UsersPage() {
+  const router = useRouter();
+
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const searchTimeoutRef = useRef(null);
 
+  // Tracks which row is busy: { id: number, type: "login" | "delete" } | null
+  const [actionState, setActionState] = useState(null);
+
+  const isRowBusy = (id, type) =>
+    actionState?.id === id && actionState?.type === type;
+
+  const anyActionBusy = actionState !== null;
+
   // Fetch users
   const fetchUsers = async () => {
     setIsLoading(true);
-
     try {
       const params = new URLSearchParams();
-      if (searchQuery) {
-        params.append("search", searchQuery);
-      }
+      if (searchQuery) params.append("search", searchQuery);
 
       const response = await api.get(`/admin/get-all-users.php?${params}`);
       const res = response.data;
 
       if (res.success) {
-        setUsers(res.users || []);
+        setUsers(
+          (res.users || []).map((u) => ({
+            ...u,
+            is_verified: String(u.is_verified) === "true",
+          })),
+        );
       } else {
         toast.error(res.message || "Failed to load users");
       }
@@ -45,6 +59,39 @@ export default function UsersPage() {
       toast.error(error.response?.data?.message || "Failed to load users");
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  // Login as user (impersonation)
+  const loginAsUser = async (userId, userName) => {
+    if (
+      !confirm(
+        `Login as "${userName}"? You will be redirected to their dashboard as this user.`,
+      )
+    ) {
+      return;
+    }
+
+    setActionState({ id: userId, type: "login" });
+
+    try {
+      const response = await api.post("/admin/login-as-user.php", { userId });
+      const res = response.data;
+
+      if (res.success) {
+        toast.success(res.message || `Logged in as ${userName}`);
+
+        // Full page redirect so the new session is picked up everywhere
+        // (client state, layouts, server components, etc.)
+        window.location.href = "/dashboard";
+      } else {
+        toast.error(res.message || "Failed to login as user");
+      }
+    } catch (error) {
+      console.error("Login as user error:", error);
+      toast.error(error.response?.data?.message || "Failed to login as user");
+    } finally {
+      setActionState(null);
     }
   };
 
@@ -57,6 +104,8 @@ export default function UsersPage() {
     ) {
       return;
     }
+
+    setActionState({ id: userId, type: "delete" });
 
     try {
       const response = await api.post("/admin/delete-user.php", { userId });
@@ -71,6 +120,8 @@ export default function UsersPage() {
     } catch (error) {
       console.error("Delete user error:", error);
       toast.error(error.response?.data?.message || "Failed to delete user");
+    } finally {
+      setActionState(null);
     }
   };
 
@@ -104,14 +155,10 @@ export default function UsersPage() {
     });
   };
 
-  // Get status class
-  const getStatusClass = (verified) => {
-    return verified === "true" ? "verified" : "unverified";
-  };
-
-  // Load users on mount
+  // Load users on mount / search change
   useEffect(() => {
     fetchUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuery]);
 
   return (
@@ -234,12 +281,12 @@ export default function UsersPage() {
                     <td className="px-4 py-3">
                       <span
                         className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
-                          user.is_verified === "true"
+                          user.is_verified
                             ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-400"
                             : "bg-amber-100 text-amber-700 dark:bg-amber-950/30 dark:text-amber-400"
                         }`}
                       >
-                        {user.is_verified === "true" ? (
+                        {user.is_verified ? (
                           <>
                             <CheckCircle size={12} />
                             Verified
@@ -272,15 +319,38 @@ export default function UsersPage() {
                             className="text-zinc-400 transition-colors hover:text-green-600 dark:text-[#8b93a7] dark:hover:text-green-400"
                           />
                         </Link>
+
+                        {/* Login As User */}
+                        <button
+                          onClick={() => loginAsUser(user.id, user.fullname)}
+                          disabled={anyActionBusy}
+                          className="rounded-lg p-2 transition-colors hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-blue-950/20"
+                          title="Login as this user"
+                        >
+                          {isRowBusy(user.id, "login") ? (
+                            <div className="h-4 w-4 animate-spin rounded-full border-2 border-blue-600 border-t-transparent dark:border-blue-400 dark:border-t-transparent" />
+                          ) : (
+                            <UserCog
+                              size={16}
+                              className="text-zinc-400 transition-colors hover:text-blue-600 dark:text-[#8b93a7] dark:hover:text-blue-400"
+                            />
+                          )}
+                        </button>
+
                         <button
                           onClick={() => deleteUser(user.id, user.fullname)}
-                          className="rounded-lg p-2 transition-colors hover:bg-red-50 dark:hover:bg-red-950/20"
+                          disabled={anyActionBusy}
+                          className="rounded-lg p-2 transition-colors hover:bg-red-50 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-red-950/20"
                           title="Delete User"
                         >
-                          <Trash2
-                            size={16}
-                            className="text-zinc-400 transition-colors hover:text-red-600 dark:text-[#8b93a7] dark:hover:text-red-400"
-                          />
+                          {isRowBusy(user.id, "delete") ? (
+                            <div className="h-4 w-4 animate-spin rounded-full border-2 border-red-600 border-t-transparent dark:border-red-400 dark:border-t-transparent" />
+                          ) : (
+                            <Trash2
+                              size={16}
+                              className="text-zinc-400 transition-colors hover:text-red-600 dark:text-[#8b93a7] dark:hover:text-red-400"
+                            />
+                          )}
                         </button>
                       </div>
                     </td>
