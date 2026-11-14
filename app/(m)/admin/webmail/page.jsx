@@ -39,7 +39,7 @@ export default function WebmailPage() {
         {/* Login Section */}
         <div className="border-b border-zinc-200 bg-zinc-50 p-6 text-center dark:border-[#232a3b] dark:bg-[#1a2035]">
           <a
-            href="https://mail.hostinger.com/v2/auth/login"
+            href="https://mail.capitaledgehub.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-green-600 to-green-600 px-6 py-3 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -160,7 +160,7 @@ export default function WebmailPage() {
         </h3>
         <div className="flex flex-wrap gap-3">
           <a
-            href="https://mail.hostinger.com/v2/auth/login"
+            href="https://mail.capitaledgehub.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-700 transition-all hover:-translate-y-0.5 hover:border-green-500 hover:bg-white dark:border-[#232a3b] dark:bg-[#1a2035] dark:text-zinc-300 dark:hover:border-green-400 dark:hover:bg-[#12161f]"
@@ -170,13 +170,13 @@ export default function WebmailPage() {
             <ExternalLink size={14} className="opacity-50" />
           </a>
           <a
-            href="https://www.hostinger.com/"
+            href="https://mail.capitaledgehub.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-700 transition-all hover:-translate-y-0.5 hover:border-green-500 hover:bg-white dark:border-[#232a3b] dark:bg-[#1a2035] dark:text-zinc-300 dark:hover:border-green-400 dark:hover:bg-[#12161f]"
           >
             <Shield size={16} />
-            Hostinger Dashboard
+            Mail Dashboard
             <ExternalLink size={14} className="opacity-50" />
           </a>
         </div>
